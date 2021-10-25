@@ -41,10 +41,10 @@ TEST(Perimeter, Default ){
 
 TEST(Perimeter, Edited ){
 	Rectangle rect = Rectangle(3, 4);
-	EXPECT_EQ(25, rect.perimeter());
+	EXPECT_EQ(14, rect.perimeter());
 }
 
-TEST(Perimeter, zero ){
+TEST(Perimeter, Zero ){
 	Rectangle rect = Rectangle(0, 0);
 	EXPECT_EQ(0, rect.perimeter()); 
 }
