@@ -1,4 +1,4 @@
-#include "rectangle.hpp"
+#include "../header/rectangle.hpp"
 
 Rectangle::Rectangle(){
 	this->width = 1;
@@ -12,6 +12,14 @@ void Rectangle::set_width(int w){
 
 void Rectangle::set_height(int h){
 	this->height = h;
+}
+
+int Rectangle::getHeight(int){
+	return h;
+}
+
+int Rectangle::getWidth(int){
+	return w;
 }
 
 int Rectangle::area(){
