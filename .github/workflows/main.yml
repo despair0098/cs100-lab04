@@ -30,7 +30,8 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Running Test Cases
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cmake3 .
+          make
+          ./test
