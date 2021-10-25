@@ -8,17 +8,13 @@ TEST(Constructor,Default){
 }
 
 TEST(Constructor,WidthAndHeight){
-	Rectangle rect;
-	rect.set_width(3);
-	rect.set_height(4);
+	Rectangle rect = Rectangle(3, 4);
 	EXPECT_EQ(3, rect.getWidth());
 	EXPECT_EQ(4, rect.getHeight());
 }
 
 TEST(Constructor, Zero ){
-	Rectangle rect;
-	rect.set_width(0);
-	rect.set_height(0);
+	Rectangle rect = Rectangle(0, 0);
 	EXPECT_EQ(0, rect.getWidth());
 	EXPECT_EQ(0, rect.getHeight());
 }
@@ -29,16 +25,12 @@ TEST(Area, Default){
 }
 
 TEST(Area, Edited){
-	Rectangle rect;
-	rect.set_width(3);
-	rect.set_height(4);
+	Rectangle rect = Rectangle(3, 4);
 	EXPECT_EQ(12, rect.area());
 }	
 
 TEST(Area, Zero ){
-	Rectangle rect;
-	rect.set_width(0);
-	rect.set_height(0);
+	Rectangle rect = Rectangle(0, 0);
 	EXPECT_EQ(0, rect.area());	
 }
 
@@ -47,16 +39,17 @@ TEST(Perimeter, Default ){
 	EXPECT_EQ(4, rect.perimeter());
 }
 
-TEST(Perimter, Edited ){
-	Rectangle rect;
-	rect.set_width(3);
-	rect.set_height(4);
+TEST(Perimeter, Edited ){
+	Rectangle rect = Rectangle(3, 4);
 	EXPECT_EQ(25, rect.perimeter());
 }
 
 TEST(Perimeter, zero ){
-	Rectangle rect;
-	rect.set_width(0);
-	rect.set_height(0);
+	Rectangle rect = Rectangle(0, 0);
 	EXPECT_EQ(0, rect.perimeter()); 
+}
+
+int main(int argc, char **argv){
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
 }
